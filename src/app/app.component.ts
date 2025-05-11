@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {HeaderComponent} from "./header/header.component";
-import {UserComponent} from './user/user.component';
+import {User, UserComponent} from './user/user.component';
 import {DUMMY_USERS} from './dummy-users';
 import {TasksComponent} from './tasks/tasks.component';
 
@@ -17,10 +17,9 @@ import {TasksComponent} from './tasks/tasks.component';
 })
 export class AppComponent {
   users = DUMMY_USERS
-  selectedUserName: string | undefined;
+  selectedUser?: User;
 
   onSelectUser(id: string) {
-    const selectedUser = this.users.find(user => user.id === id);
-    this.selectedUserName = selectedUser?.name
+    this.selectedUser = this.users.find(user => user.id === id);
   }
 }

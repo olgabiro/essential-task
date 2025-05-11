@@ -1,6 +1,6 @@
 import {Component, computed, input, output} from '@angular/core';
 
-interface User {
+export interface User {
   id: string;
   avatar: string;
   name: string;

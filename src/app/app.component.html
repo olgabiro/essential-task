@@ -9,8 +9,8 @@
   </ul>
 
   <div id="user-details">
-    @if (selectedUserName) {
-      <app-tasks [userName]="selectedUserName"/>
+    @if (selectedUser) {
+      <app-tasks [userName]="selectedUser.name"/>
     }
   </div>
 </main>
