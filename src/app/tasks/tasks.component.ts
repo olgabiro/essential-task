@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
-import {Task, TaskComponent} from './task/task.component';
+import {TaskComponent} from './task/task.component';
+import {Task} from './task/task.model';
 
 
 const dummyTasks: Task[] = [
