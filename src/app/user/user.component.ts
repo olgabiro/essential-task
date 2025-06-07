@@ -12,8 +12,7 @@ import {CardComponent} from '../shared/card/card.component';
   styleUrl: './user.component.css'
 })
 export class UserComponent {
-
-  @Input({ required: true}) selected!: boolean;
+  selected = input.required<boolean>();
   user = input.required<User>();
   imagePath = computed(() => 'assets/users/' + this.user().avatar)
   select = output<string>();
